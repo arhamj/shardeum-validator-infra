@@ -1,0 +1,6 @@
+.terraform
+.terraform*
+*key-pair*
+terraform*
+*key_pair*
+.idea
