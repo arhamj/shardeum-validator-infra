@@ -1,4 +1,4 @@
-# Shardeum validator infra
+# Shardeum Validator Infra
 
 Contains a list of terraform scripts to provision the resources required to run a shardeum validator.
 Namely,
@@ -12,6 +12,7 @@ The scripts support only AWS at the moment.
 
 ### Prerequisites
 
+- Install terraform
 - Install AWS CLI and configure credentials
 
 ### Usage
@@ -46,4 +47,11 @@ Note: Keep `terraform.tfstate` secure
 
 ### Next steps
 
-Follow [validator-dashboard](https://gitlab.com/shardeum/validator/dashboard) from Step 3
+- Use SSH to connect to the remote EC2 VM using,
+
+```
+ssh -i shardeum_key_pair ubuntu@<public_ip_of_ec2>
+```
+
+- The public ip of the EC2 can either be fetched using the AWS console UI or from the `terraform.tfstate` file
+- Follow [validator-dashboard](https://gitlab.com/shardeum/validator/dashboard) from Step 3
